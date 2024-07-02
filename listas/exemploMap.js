@@ -6,4 +6,4 @@ function multiplicar(num) {
 
 let numerosAoQuadrado = numeros.map((item)=> multiplicar(item))
 console.log(numeros)
-console.log(numerosAoQuadrado);
+console.log(numerosAoQuadrado)
