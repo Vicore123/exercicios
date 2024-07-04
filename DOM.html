@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .oculta{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título 1</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cum asperiores. Inventore distinctio, quae facilis corrupti temporibus magnam iure saepe. Iste voluptas vel ut. Assumenda voluptate veniam quaerat eaque ipsam! Eius voluptas quae quibusdam dignissimos sunt voluptates temporibus, error consequuntur molestias sit modi suscipit numquam est magnam, sint odio, doloremque illum obcaecati porro repudiandae autem soluta sapiente asperiores. Velit enim molestias ab, exercitationem at non, veniam distinctio labore voluptatem adipisci mollitia error necessitatibus beatae nostrum nulla accusantium dolore voluptas neque, aliquid eligendi fuga iusto inventore eius quos! Similique esse dolor, ducimus fuga ex provident eligendi inventore dolorum iste animi aliquam.</p>
+
+    <p class="paragrafoClasse">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, nesciunt!</p>
+
+    <ul>
+        <li>Coisa 1</li>
+        <li class="oculta">Coisa 2</li>
+        <li id="especial">Coisa 3</li>
+    </ul>
+
+    <div>
+        <h2>Título 2</h2>
+    </div>
+
+    <form action="#">
+        <input type="text" id="nome" placeholder='Digite seu nome'>
+
+        <input type="checkbox" name="turno" id="turnoManha" value="manhã">
+        <label for="turnoManha">Manhã</label>
+        <input type="checkbox" name="turno" id="turnoTarde" value="tarde">
+        <label for="turnoTarde">Tarde</label>
+
+        <button onclick="dizerOi()">DIZER OI</button>
+    </form>
+
+    <script>
+        // mais generalista = tag
+        let paragrafos = document.getElementsByTagName('p') // []
+        
+        let p = document.querySelector('p') //seleciona o primeiro elemento com o seletor indicado
+        let todosP = document.querySelectorAll('p') //[]
+
+
+        // mais específica que a tag
+        let paragrafosComClasse = document.getElementsByClassName('paragrafoClasse') // []
+
+        let pClasse = document.querySelector('.paragrafoClasse')
+        let psClasse = document.querySelectorAll('.paragrafoClasse')
+
+
+        // mais específica que a classe
+        let item = document.getElementById('especial')
+
+        let li = document.querySelector('#especial')
+
+
+        // Manipulações
+        item.style.color = 'blue'
+        // item.innerHTML = 'mudei com JS'
+
+
+
+        let itemOculto = document.querySelector('.oculta')
+
+
+
+        document.querySelector('div').innerHTML += '<p> texto adicionado </p>'
+
+        function dizerOi() {
+            alert('OI!')
+        }
+    </script>
+
+</body>
+</html>

@@ -11,3 +11,15 @@ let numerosDobro = numeros.map((num)=> {
 
 
 console.log(numerosDobro);
+
+
+// filter
+let par = numeros.filter((num)=> {
+    if (num%2 == 0) {
+        return num
+    }
+})
+
+
+
+let somaNumeros = numeros.reduce((soma, num)=> soma += num, 100)
