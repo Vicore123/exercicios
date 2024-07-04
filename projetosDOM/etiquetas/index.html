@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etiquetas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#">
+        <label for="">Valor Peça</label>
+        <input type="number" name="" id="valor">
+
+        
+        <label for="">Quantidade</label>
+        <input type="number" name="" id="quantidade">
+
+
+        <label for="">Cor da etiqueta</label>
+
+        <div>
+            <input type="radio" name="radio" id="vermelho" value="vermelho">
+            <label for="vermelho">Vermelho (50% off)</label>
+        </div>
+        <div>
+            <input type="radio" name="radio" id="verde" value="verde">
+            <label for="verde">Verde (30% off)</label>
+        </div>
+        <div>
+            <input type="radio" name="radio" id="amarelo" value="amarelo">
+            <label for="amarelo">Amarelo (15% off)</label>
+        </div>
+    </form>
+        <button onclick="calcular()">Calcular</button>
+
+    
+    <div id="resultados">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
