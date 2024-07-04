@@ -19,5 +19,10 @@ function calcular() {
     let valorTotal = quantidade.value * valor.value
     valorTotal -= valorTotal * desconto
 
-    document.getElementById('resultados').innerHTML = `<p>Valor Total da compra é de R$${valorTotal}</p>`
+    document.getElementById('resultados').innerHTML = `
+
+    <p>Preço Original: R$${valor.value}</p>
+    <p>Valor Total da compra: R$${valorTotal}</p>
+
+    `
 }
