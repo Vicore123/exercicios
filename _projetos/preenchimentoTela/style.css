@@ -1,0 +1,16 @@
+div {
+    height: 300px;
+    width: 500px;
+    border: 2px solid black;
+    border-color: black;
+}
+
+#vermelho {
+    background-color: red;
+}
+#verde {
+    background-color: green;
+}
+#azul {
+    background-color: blue;
+}
