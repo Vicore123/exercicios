@@ -11,3 +11,8 @@ let outroElementoFilho = document.createElement('h1')
 outroElementoFilho.innerHTML = 'Titulo criado com JS'
 
 ElementoPai.appendChild(outroElementoFilho)
+
+
+outroElementoFilho.classList = 'nomeDaClasse'
+outroElementoFilho.classList.add('nomeDaClasse')
+outroElementoFilho.classList.remove('nomeDaClasse')
