@@ -6,6 +6,16 @@ const urlImagem = 'https://openweathermap.org/img/wn/'
 
 let inputCidade = document.getElementsByName('inputText')[0]
 
+async function buscarCidadeButton(nomeCidade) {
+
+   let url = apiWeather + nomeCidade + chave + linguagem + unidade
+   let resposta = await fetch(url)
+   let objeto = await resposta.json()
+
+   console.log(objeto);
+   return objeto
+
+}
 
 async function buscarCidade() {
 
@@ -20,7 +30,7 @@ async function buscarCidade() {
 async function montarTela() {
 
    let informacoes = await buscarCidade()
-   
+
 
    let titulo = document.getElementById('nomeCidade')
    titulo.innerHTML = `Tempo em ${informacoes.name}`
@@ -36,7 +46,7 @@ async function montarTela() {
 
    let clima = document.getElementById('clima')
    clima.innerHTML = informacoes.weather[0].description
-   
+
 }
 
 

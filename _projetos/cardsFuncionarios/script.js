@@ -1,5 +1,7 @@
 // imagem dos cards no celular
 
+// parte de pegar funcionarios pelo local storage nao concluido
+
 let cards = [
   {
     nome: "Carlos Oliveira",
@@ -28,56 +30,26 @@ let cards = [
     salario: 5100,
     cargo: "Analista de Marketing",
     imagem: "https://picsum.photos/156"
-  },
-  {
-    nome: "Rafael Santos",
-    idade: 31,
-    salario: 5500,
-    cargo: "Engenheiro de Software",
-    imagem: "https://picsum.photos/157"
-  },
-  {
-    nome: "Juliana Oliveira",
-    idade: 26,
-    salario: 4700,
-    cargo: "UI/UX Designer",
-    imagem: "https://picsum.photos/158"
-  },
-  {
-    nome: "Gustavo Almeida",
-    idade: 33,
-    salario: 5800,
-    cargo: "Coordenador de TI",
-    imagem: "https://picsum.photos/159"
-  },
-  {
-    nome: "Camila Ferreira",
-    idade: 30,
-    salario: 5300,
-    cargo: "Analista de Qualidade",
-    imagem: "https://picsum.photos/160"
-  },
-  {
-    nome: "Rodrigo Costa",
-    idade: 34,
-    salario: 5900,
-    cargo: "Arquiteto de Software",
-    imagem: "https://picsum.photos/161"
-  },
-  {
-    nome: "Patrícia Alves",
-    idade: 28,
-    salario: 4900,
-    cargo: "Especialista em UX",
-    imagem: "https://picsum.photos/162"
   }
 ]
+function adicionarCard() {
+  let nome = document.getElementById('nome').value
+  let idade = document.getElementById('idade').value
+  let salario = document.getElementById('salario').value
+  let cargo = document.getElementById('cargo').value
 
-body = document.querySelector('header')
-cardEstrutura = document.createElement('h1')
-cardEstrutura.innerHTML = 'Funcionários'
-body.appendChild(cardEstrutura)
+  let funcionario = {
+    nome:nome, 
+    idade:idade,
+    salario:salario,
+    cargo:cargo
+  }
 
+  let funcionarios = JSON.parse(localStorage.getItem('funcionario')) || []
+  funcionarios.push(funcionario)
+  localStorage.setItem('funcionarios', JSON.stringify(funcionarios))
+
+}
 function pegarNome(nome, idade, salario, cargo, imagem) {
   body = document.querySelector('main')
   cardEstrutura = document.createElement('div')
