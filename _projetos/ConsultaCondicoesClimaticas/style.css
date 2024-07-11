@@ -4,13 +4,10 @@ body {
    margin-top: 50px;
 }
 
-
-
-
 .painel {
    background-color:  #444444;
    width: 420px;
-   height: 450px;
+   height: 500px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -19,6 +16,9 @@ body {
    font-family:Arial, Helvetica, sans-serif;
    color: white;
 
+   h1 {
+      font-size: 25px;
+   }
    .form {
       display: flex;
       justify-content: center;
@@ -56,14 +56,20 @@ body {
       }
    }
 
-   h1 {
+   h2 {
       font-size: 30px;
    }
 
-   .info {
+   .info1 {
       display: flex;
       justify-content: space-between;
+      width: 300px;
       
+   }
+   .info2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 200px;
    }
 

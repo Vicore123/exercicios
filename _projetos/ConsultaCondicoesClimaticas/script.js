@@ -13,14 +13,30 @@ async function buscarCidade() {
    let resposta = await fetch(url)
    let objeto = await resposta.json()
 
+   console.log(objeto);
    return objeto
-   
 }
 
-function montarTela() {
+async function montarTela() {
 
-   h1 = document.getElementById('nomeCidade')
-   h1.innerHTML = `Tempo em ${inputCidade.value}`
+   let informacoes = await buscarCidade()
+   
+
+   let titulo = document.getElementById('nomeCidade')
+   titulo.innerHTML = `Tempo em ${informacoes.name}`
+
+   let temperatura = document.getElementById('temperatura')
+   temperatura.innerHTML = `Temperatura: ${informacoes.main.temp}°C`
+
+   let umidade = document.getElementById('umidade')
+   umidade.innerHTML = `Umidade: ${informacoes.main.humidity}%`
+
+   let icone = document.getElementById('icone')
+   icone.src = urlImagem + informacoes.weather[0].icon + '@2x.png'
+
+   let clima = document.getElementById('clima')
+   clima.innerHTML = informacoes.weather[0].description
+   
 }
 
 
